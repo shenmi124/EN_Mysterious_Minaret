@@ -203,48 +203,48 @@ function TransSubTextNode(node) {
 }
 
 ! function () {
-    console.log("加载汉化模块");
+		console.log("加载英化模块");
 
-    let observer_config = {
-        attributes: false,
-        characterData: true,
-        childList: true,
-        subtree: true
-    };
-    let targetNode = document.body;
-    //汉化静态页面内容
-    TransSubTextNode(targetNode);
-    transTaskMgr.doTask();
-    //监听页面变化并汉化动态内容
-    let observer = new MutationObserver(function (e) {
-        //window.beforeTransTime = performance.now();
-        observer.disconnect();
-        for (let mutation of e) {
-            if (mutation.target.nodeName === "SCRIPT"|| mutation.target.nodeName === "STYLE" || mutation.target.nodeName === "TEXTAREA") continue;
-			if (mutation.target.nodeName === "#text") {
-                mutation.target.textContent = cnItem(mutation.target.textContent, mutation.target);
-            } else if (!mutation.target.childNodes || mutation.target.childNodes.length == 0) {
-                mutation.target.innerText = cnItem(mutation.target.innerText, mutation.target);
-            } else if (mutation.addedNodes.length > 0) {
-                for (let node of mutation.addedNodes) {
-                    if (node.nodeName === "#text") {
-                        node.textContent = cnItem(node.textContent, node);
-                        //console.log(node);
-                    } else if (node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE" && node.nodeName !== "TEXTAREA") {
-                        if (!node.childNodes || node.childNodes.length == 0) {
-							if (node.innerText)
-								node.innerText = cnItem(node.innerText, node);
-                        } else {
-                            TransSubTextNode(node);
-                            transTaskMgr.doTask();
-                        }
-                    }
-                }
-            }
-        }
-        observer.observe(targetNode, observer_config);
-        //window.afterTransTime = performance.now();
-        //console.log("捕获到页面变化并执行汉化，耗时" + (afterTransTime - beforeTransTime) + "毫秒");
-    });
-    observer.observe(targetNode, observer_config);
+		let observer_config = {
+			attributes: false,
+			characterData: true,
+			childList: true,
+			subtree: true
+		};
+		let targetNode = document.body;
+		//汉化静态页面内容
+		TransSubTextNode(targetNode);
+		transTaskMgr.doTask();
+		//监听页面变化并汉化动态内容
+		let observer = new MutationObserver(function (e) {
+			//window.beforeTransTime = performance.now();
+			observer.disconnect();
+			for (let mutation of e) {
+				if (mutation.target.nodeName === "SCRIPT"|| mutation.target.nodeName === "STYLE" || mutation.target.nodeName === "TEXTAREA") continue;
+				if (mutation.target.nodeName === "#text") {
+					mutation.target.textContent = cnItem(mutation.target.textContent, mutation.target);
+				} else if (!mutation.target.childNodes || mutation.target.childNodes.length == 0) {
+					mutation.target.innerText = cnItem(mutation.target.innerText, mutation.target);
+				} else if (mutation.addedNodes.length > 0) {
+					for (let node of mutation.addedNodes) {
+						if (node.nodeName === "#text") {
+							node.textContent = cnItem(node.textContent, node);
+							//console.log(node);
+						} else if (node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE" && node.nodeName !== "TEXTAREA") {
+							if (!node.childNodes || node.childNodes.length == 0) {
+								if (node.innerText)
+									node.innerText = cnItem(node.innerText, node);
+							} else {
+								TransSubTextNode(node);
+								transTaskMgr.doTask();
+							}
+						}
+					}
+				}
+			}
+			observer.observe(targetNode, observer_config);
+			//window.afterTransTime = performance.now();
+			//console.log("捕获到页面变化并执行汉化，耗时" + (afterTransTime - beforeTransTime) + "毫秒");
+		});
+		observer.observe(targetNode, observer_config);
 }();
