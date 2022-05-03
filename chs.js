@@ -43,7 +43,7 @@ var cnItems = {
 	"治疗": "treat",
 	"": "",
 	"对敌方造成": "inflict on the enemy",
-	"": "",
+	"对敌方造成 13 物理伤害": "inflict on the enemy 13 Physical Damage",
 	"": "",
 	"": "",
 	"": "",
@@ -199,10 +199,17 @@ var cnExcludePostfix = [
 //换行加空格：\n(.+)
 var cnRegReplace = new Map([
 	[/^(\d+) 物理伤害/, ' $1 Physical Damage'],
+	[/^攻击 (\d+)/, 'Damage $1'],
 	[/^增加 (\d+) 护甲/, 'get $1 Armor'],
 	[/^恢复 (\d+) 血,获得 (\d+) 恢复/, 'restore $1 HP,get $2 Restoration'],
+	[/^消耗:(\d+) 血量/, 'consume:$1 HP'],
+	[/^消耗:(\d+) 魔力/, 'consume:$1 Mana'],
 	[/^消耗:(\d+) 体力/, 'consume:$1 Stamina'],
 	[/^血量 (\d+) \/ (\d+)/, 'HP $1 / $2'],
 	[/^魔力 (\d+) \/ (\d+)/, 'Mana $1 / $2'],
 	[/^体力 (\d+) \/ (\d+)/, 'Stamina $1 / $2'],
+	[/^护甲 (\d+)/, 'Armor $1'],
+	[/^(\d+)护甲/, '$1Armor'],
+	[/^恢复 (\d+)/, 'Restoration $1'],
+	[/^(\d+)恢复/, '$1Restoration'],
 ]); 
