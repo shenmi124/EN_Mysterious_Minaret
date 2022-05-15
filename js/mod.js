@@ -13,13 +13,16 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.1.1.23b",
+	num: "0.1.1.24b",
 	name: "神秘尖塔",
 }
 
 let changelog = `
 	<div class="link" onclick="backnone()"><big><big>返回游戏</big></big></div><br>
 	<h1>更新日志:</h1><br>
+	<h3>v0.1.2.24β</h3><br>
+	<li>商店(其实特别好做,半个多小时就做好了)<br>
+	<li>平衡游戏<br>
 	<h3>v0.1.1.23β</h3><br>
 	<li>大幅度平衡游戏<br>
 	<li>增加神器<br>
