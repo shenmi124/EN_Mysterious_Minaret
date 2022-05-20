@@ -661,14 +661,14 @@ addLayer("pokedex_effect", {
 			onClick(){player.pokedex.eff = new Decimal(7)},
 		},
 		19:{
-			title:"卍",
+			title:"焱",
 			canClick(){return true},
 			unlocked(){return true},
 			style() {return {'height': "50px","min-height": "50px",'width': '50px'}},
 			onClick(){player.pokedex.eff = new Decimal(8)},
 		},
 		20:{
-			title:"卐",
+			title:"炎",
 			canClick(){return true},
 			unlocked(){return true},
 			style() {return {'height': "50px","min-height": "50px",'width': '50px'}},
@@ -1646,7 +1646,7 @@ addLayer("over", {
 			left: (player.tab !== 'none' && player.navTab !== 'none')}"
 			 :style="{'margin-top': !readData(layoutInfo.showTree) && player.tab == 'info-tab' ? '50px' : ''}">
 			<div id="version" onclick="showTab('changelog-tab')" class="overlayThing" style="margin-right: 13px" >
-				v0.1.2.27b</div>
+				v0.1.2.29b</div>
 			<img id="optionWheel" class="overlayThing"  src="png/options_wheel.png" onclick="showTab('options-tab')"></img>
 			<div id="info" class="overlayThing" onclick="showTab('info-tab')"><br>i</div>
 			<img id="pokedex" class="overlayThing" src="png/pokedex.png" onclick="showTab('pokedex')"></img>
