@@ -243,4 +243,9 @@ var cnRegReplace = new Map([
 	[/^你在关卡/, 'Now,you are in level'],
 	[/^怪物会随着关卡提升越来越强/, 'The monster will become stronger and stronger with the levels you have pathed'],
 	[/^牌库/, 'Card bank'],
+	
+	[/^商店/, 'Shore'],
+	[/^怪物/, 'Monster'],
+	[/^精英怪/, 'Elite Monster'],
+	[/^宝箱/, 'Chest'],
 ]); 
