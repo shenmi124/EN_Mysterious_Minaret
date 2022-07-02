@@ -183,7 +183,7 @@ var cnRegReplace = new Map([
 	[/^并附带 (\d+) 眩晕$/, ' with an incidental $2 stun'],
 	[/^并获得 (\d+) 回旋镖$/, ' and get $2 boomerang'],
 	[/^恢复 (\d+) 体力,(\d+) 魔力和 (\d+) 血,造成 (\d+) 物理伤害和 (\d+) 魔法伤害,给敌方恢复 (\d+) 血,自己减少 (\d+) 血$/, 'restores $1 Stamina, $2 Mana and $3 HP, dealing $4 Physical Damage and $5 Magic Damage, restoring $6 HP to the enemy and reducing $7 HP to itself'],
-	[/^,获得 (\d+) 魔力枯竭.给敌方 (\d+) 焱$/, ' and give $2 mana Depletion. give the enemy $3 Fire'],
+	[/^,获得 (\d+) 魔力枯竭.给敌方 (\d+) 焱$/, ' and give $2 Mana Depletion. give the enemy $1 Flames'],
 	[/^造成$/, 'deal'],
 	[/^,敌方获得 (\d+) 魔力枯竭$/, ', enemy gains $1 Mana Depletion'],
 	[/^,获得 (\d+) 魔力枯竭$/, ', gain $1 Mana Depletion'],
