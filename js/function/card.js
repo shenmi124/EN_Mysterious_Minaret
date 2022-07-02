@@ -83,7 +83,7 @@ function redis(id1,id2){
 		if(player.data[id1+id2].eq(25)){return `恢复自己损失血量/3的生命<br>消耗:11 魔力`}
 		if(player.data[id1+id2].eq(26)){return `将手牌移回牌库并重新抽取等量的手牌且每移回一张牌+3护甲<br>消耗:15 魔力`}
 		if(player.data[id1+id2].eq(27)){return `造成<red id="red">min((自己损失血量*敌方损失血量)/150的物理伤害,200)</red><br>现在能造成 <red id="red">`+format(Decimal.min(player.data.hpmax.sub(player.data.hp).mul(player.data.dehpmax.sub(player.data.dehp)).div(150),200).floor(),0)+` 物理伤害</red><br>消耗:3 体力`}
-		if(player.data[id1+id2].eq(28)){return `造成<red id="red">8*持有手牌的物理伤害</red><br>消耗:1体力`}
+		if(player.data[id1+id2].eq(28)){return `造成<red id="red">8*持有手牌的物理伤害</red><br>消耗:1 体力`}
 		if(player.data[id1+id2].eq(29)){return `获得2魔力恢复效果<br>消耗:无`}
 		if(player.data[id1+id2].eq(30)){return `恢复20血,获得 5 恢复<br>消耗:13 魔力`}
 		if(player.data[id1+id2].eq(31)){return `恢复4血并获得5恢复,5护甲<br>消耗:1 体力`}

@@ -195,7 +195,7 @@ var cnRegReplace = new Map([
 	[/^恢复自己损失血量\/ (\d+) 的生命$/, 'restores the loss of HP \/ $1 of life'],
 	[/^将手牌移回牌库并重新抽取等量的手牌且每移回一张牌\+(\d+)护甲$/, 'the hand cards moves back to the deck and the same amount of hand cards is draw again, with each move back to one card \+ $1 Armor'],
 	[/^造成min((自己损失血量\*敌方损失血量)\/ (\d+) 的物理伤害,(\d+))$/, 'Physical Damage inflict on min ((loss of health by oneself \* enemy loss of health)\/ $1, $2)'],
-	[/^造成 (\d+) \*持有手牌的物理伤害$/, 'deal $1 \*  holding hand cards Physical Damage'],
+	[/^(\d+)\*持有手牌的物理伤害$/, '$1 \*  holding hand cards Physical Damage'],
 	[/^获得(\d+)魔力恢复效果$/, 'gain $1 Mana Regeneration'],
 	[/^恢复(\d+)血,获得 (\d+) 恢复$/, 'restore $1 HP, gain $2 Restoration'],
 	[/^恢复(\d+)血并获得(\d+)恢复,(\d+)护甲$/, 'Restore $1 HP and get $2 Restoration, $3 Armor'],
