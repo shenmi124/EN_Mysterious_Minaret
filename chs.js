@@ -181,7 +181,7 @@ var cnRegReplace = new Map([
 	[/^给敌方 (\d+) 中毒$/, 'Poison the enemy $1'],
 	[/^给敌方 (\d+) 感染,我方 (\d+) 感染$/, 'Infection $1 the enemy and $2 you'],
 	[/^抽一张牌,恢复 (\d+) 体力,如果有智慧效果则再触发一次$/, 'draw a card to restore $1 Stamina, and execute it again if there is an Wisdom effect'],
-	[/^并附带 (\d+) 眩晕$/, ' with an incidental $2 stun'],
+	[/^并附带 (\d+) 眩晕$/, ' with an incidental $1 stun'],
 	[/^并获得 (\d+) 回旋镖$/, ' and get $1 boomerang'],
 	[/^和$/, ' and'],
 	[/^恢复 (\d+) 体力,(\d+) 魔力和 (\d+) 血,造成$/, 'restores $1 Stamina, $2 Mana and $3 HP, deal'],
